@@ -1,0 +1,26 @@
+.footer {
+  background-color: var(--black-color);
+  padding: 50px 0;
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer__social--list {
+  display: flex;
+  margin-left: auto;
+}
+
+.footer__social--item:not(:last-child) {
+  margin-right: 19px;
+}
+
+.footer__social--link {
+  fill: #cacaca;
+  transition: fill .3s ease-in-out;
+}
+
+.footer__social--link:hover {
+  fill: var(--white-color);
+}

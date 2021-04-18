@@ -1,0 +1,124 @@
+.contacts {
+  padding-top: 5px;
+}
+.contacts__title {
+  margin-bottom: 24px;
+}
+
+.contacts__content {
+  border-top: 1px solid #CACACA;
+  position: relative;
+}
+
+.contacts__container {
+  display: flex;
+}
+
+.contacts-text {
+  padding: 124px 0 124px 0;
+  max-width: 525px;
+}
+
+.contacts-text__subtitle {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.contacts-text__address {
+  font-style: normal;
+  margin-bottom: 37px;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-form--title {
+  font-size: 24px;
+  margin-bottom: 19px;
+}
+
+.contacts-form__input {
+  width: 400px;
+  height: 40px;
+  padding-left: 24px;
+  margin-bottom: 25px;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+.contacts-form__input:focus {
+  outline: none;
+  border: 2px solid var(--outline-color);
+
+}
+
+.contacts-form__btn {
+  max-width: 157px;
+  padding: 17px 35px;
+  margin-bottom: 38px;
+}
+
+.contacts-form__btn:hover {
+  color: var(--white-color);
+}
+
+.contacts-form__btn:active {
+  border: 2px solid var(--outline-color);
+}
+
+
+.contacts-form__btn:focus .contacts-form__btn--text{
+  outline: 2px solid var(--outline-color);
+}
+
+.connect {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.connect__messengers {
+  display: flex;
+}
+
+.connect__messenger {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.connect__messenger:focus {
+  outline: none;
+  border: 2px solid var(--outline-color);
+  border-radius: 50%;
+}
+
+.connect__messenger:not(:last-child) {
+  margin-right: 20px;
+}
+
+.whatsapp {
+  background-image: url(../img/Whatsapp-Icon.svg);
+}
+
+.telegram {
+  background-image: url(../img/Telegram_Logo.svg);
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1239px;
+}
+
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
