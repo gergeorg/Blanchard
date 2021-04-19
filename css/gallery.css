@@ -274,7 +274,7 @@
   .gallery__filter {
     width: 47%;
     margin-right: 43px;
-    padding-left: 5px;
+    /* padding-left: 5px; */
   }
 
   .gallery__swiper-container {

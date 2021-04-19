@@ -81,21 +81,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // publication slider
 
-  // const publicationSlider = document.querySelector('.publication__swiper-container');
+  const publicationSlider = document.querySelector('.publication__swiper-container');
 
-  // var publicationSwiper = new Swiper(publicationSlider, {
-  //   slideClass: ('publication__slide'),
-  //   slidesPerView: 3,
-  //   spaceBetween: 50,
-  //   pagination: {
-  //     el: '.publication__swiper-pagination',
-  //     type: 'fraction',
-  //   },
-  //   navigation: {
-  //     nextEl: '.publication__swiper-button-next',
-  //     prevEl: '.publication__swiper-button-prev',
-  //   }
-  // })
+  var publicationSwiper = new Swiper(publicationSlider, {
+    slideClass: ('publication__slide'),
+    slidesPerView: 2,
+    spaceBetween: 50,
+    // updateOnWindowResize: true,
+    pagination: {
+      el: '.publication__swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.publication__swiper-button-next',
+      prevEl: '.publication__swiper-button-prev',
+    },
+
+    breakpoints:{
+      // 320:{
+      //   slidesPerView: 2,
+      //   },
+
+      // 1024:{
+      //   spaceBetween: 30,
+      //   },
+
+      1500:{
+        // spaceBetween: 50,
+        slidesPerView: 3,
+      }
+    }
+  })
 
   // partners swiper
 
