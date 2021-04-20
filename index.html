@@ -1181,7 +1181,8 @@
       <h2 class="title events__head-title">События</h2>
       <div class="swiper-container events__slider-container" data-mobile="false">
         <div class="events__list swiper-wrapper">
-          <div class="events__item event_1">
+          <div class="events__item">
+            <div class="events__item-bg event-1"></div>
             <div class="events__item-text">
               <span class="events__place small-text">Музей им. Щусева</span>
               <span class="events__date small-text">с 20 марта по 30 апреля</span>
@@ -1191,7 +1192,8 @@
             </div>
           </div>
 
-          <div class="events__item event_2">
+          <div class="events__item">
+            <div class="events__item-bg event-2"></div>
             <div class="events__item-text">
               <span class="events__place small-text">ММОМА</span>
               <span class="events__date small-text">24 марта 19:00</span>
@@ -1201,7 +1203,8 @@
             </div>
           </div>
 
-          <div class="events__item event_3">
+          <div class="events__item event-hidden-tablet">
+            <div class="events__item-bg event-3"></div>
             <div class="events__item-text">
               <span class="events__place small-text">Еврейский музей</span>
               <span class="events__date small-text">с 31 марта по 21 апреля</span>
@@ -1211,7 +1214,8 @@
             </div>
           </div>
 
-          <div class="events__item event_4 event-hidden">
+          <div class="events__item event-hidden">
+            <div class="events__item-bg event-4"></div>
             <div class="events__item-text">
               <span class="events__place small-text">Третьяковка на Крымском валу</span>
               <span class="events__date small-text">с 30 марта по 30 апреля</span>
@@ -1221,7 +1225,8 @@
             </div>
           </div>
 
-          <div class="events__item event_5 event-hidden">
+          <div class="events__item event-hidden">
+            <div class="events__item-bg event-5"></div>
             <div class="events__item-text">
               <span class="events__place small-text">ММАМ</span>
               <span class="events__date small-text">с 8 апреля по 20 мая</span>
@@ -1230,16 +1235,6 @@
               <a href="#" class="events__more focus-style">Подробнее</a>
             </div>
           </div>
-
-          <!-- <div class="events__item event_6">
-            <div class="events__item-text">
-              <span class="events__place small-text">Музей Рерихов на ВДНХ</span>
-              <span class="events__date small-text">с 1 августа по 30 сентября</span>
-              <h3 class="events__title">Сохраняя культуру</h3>
-              <p class="events__descr">Живопись, скульптура и&nbsp;предметы из&nbsp;частной коллекции Рерихов&nbsp;&mdash; включая тибетские иконы из&nbsp;поездки в&nbsp;Индию. У&nbsp;отца&nbsp;&mdash; панорама его 45-летней жизни в&nbsp;искусстве, включая архитектурную серию и&nbsp;&laquo;Гималаи&raquo;. У&nbsp;сына&nbsp;&mdash; гималайские пейзажи и&nbsp;быт индийской деревни, а&nbsp;также полотна на&nbsp;евангельские сюжеты.</p>
-              <a href="#" class="events__more focus-style">Подробнее</a>
-            </div>
-          </div> -->
         </div>
 
         <div class="swiper-pagination"></div>
@@ -1248,206 +1243,211 @@
       <button class="all-events purple-btn btn">Все события</button>
     </section>
 
-    <!-- <section class="publication" id="publication">
+    <section class="publication" id="publication">
       <div class="container publication-container">
         <form class="publication__form" action="https://postman-echo.com/post" method="POST">
           <h2 class="title publication__title">Издания</h2>
-          <p class="publication__subtitle">Категории</p>
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="best-seller">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Бестселлеры</span>
-            </span>
-          </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="Art">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Искусство</span>
-            </span>
-          </label>
+          <button class="publication__btn btn publication__subtitle" type="button"><span class="publication__btn-text">Категории</span></button>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="Architecture">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Архитектура</span>
-            </span>
-          </label>
+          <div class="publication__category">
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="best-seller">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Бестселлеры</span>
+                <span class="publication__form-uncheck">&times;</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" checked name="Design">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Дизайн</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="Art">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Искусство</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="Fashion">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Мода</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="Architecture">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Архитектура</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="for_children">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Детям</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" checked name="Design">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Дизайн</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="imaginative_literature">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Художественная литература</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="Fashion">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Мода</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="publicism">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Публицистика</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="for_children">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Детям</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="travel_guides">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Путеводители</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="imaginative_literature">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Художественная <wbr>литература</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="Philosophy">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Философия</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="publicism">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Публицистика</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="educational_literature">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Учебная литература</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="travel_guides">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Путеводители</span>
+              </span>
+            </label>
 
-          <label class="publication__form--label">
-            <input class="publication__form--input visually-hidden" type="checkbox" name="magazines-newspapers">
-            <span class="publication__form--input-span">
-              <span class="publication__form--input-text">Журналы и газеты</span>
-            </span>
-          </label>
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="Philosophy">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Философия</span>
+              </span>
+            </label>
+
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="educational_literature">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Учебная литература</span>
+              </span>
+            </label>
+
+            <label class="publication__form-label">
+              <input class="publication__form-input visually-hidden" type="checkbox" name="magazines-newspapers">
+              <span class="publication__form-checkbox">
+                <span class="publication__form-text">Журналы и газеты</span>
+              </span>
+            </label>
+          </div>
 
           <p class="publication__subtitle price">Цена</p>
 
-          <div class="price__form">
-            <label class="price__form--label">
-              <span class="price__form--from">От</span>
-              <input class="price__form--input" type="number" name="price-from">
+          <div class="price-form">
+            <label class="price-form__label">
+              <span class="price-form__from">От</span>
+              <input class="price-form__input" type="number" name="price-from">
             </label>
 
-            <label class="price__form--label">
-              <span class="price__form--to">До</span>
-              <input class="price__form--input" type="number" name="price-to">
+            <label class="price-form__label">
+              <span class="price-form__to">До</span>
+              <input class="price-form__input" type="number" name="price-to">
             </label>
-            <span class="price__form--currency">руб.</span>
+            <span class="price-form-currency">руб.</span>
           </div>
         </form>
 
-        <div class="publication__swiper-container swiper-container">
-          <div class="publication__swiper--navagation">
+        <!-- <div class="publication__swiper-container swiper-container">
+          <div class="publication__swiper-navagation">
             <div class="publication__swiper-button-prev swiper-button-prev"></div>
             <div class="swiper-pagination publication__swiper-pagination"></div>
             <div class="publication__swiper-button-next swiper-button-next"></div>
           </div>
 
-          <div class="swiper-wrapper">
+          <div class="publication__swiper-wrapper swiper-wrapper">
             <div class="publication__slide swiper-slide">
-              <img class="publication__slide--img" src="img/publication-slide/publication-slide-1.jpg" alt="Искусство цвета - Иттен, Иоханнес">
-              <div class="publication__slide--text">
-                <span class="publication__slide--name">Искусство цвета
-                  <span class="publication__slide--author">Иттен, Иоханнес</span>
+              <img class="publication__slide-img" src="img/publication-slide/publication-slide-1.jpg" alt="Искусство цвета - Иттен, Иоханнес">
+              <div class="publication__slide-text">
+                <span class="publication__slide-name">Искусство цвета
+                  <span class="publication__slide-author">Иттен, Иоханнес</span>
                 </span>
-                <span class="publication__slide--price">620 руб</span>
+                <span class="publication__slide-price">620 руб</span>
               </div>
-              <button class="publication__slide--btn purple-btn btn">
-                <span class="publication__slide--btn-span">Заказать</span></button>
+              <button class="publication__slide-btn purple-btn btn">
+                <span class="publication__slide-span">Заказать</span></button>
             </div>
 
             <div class="publication__slide swiper-slide">
-              <img class="publication__slide--img" src="img/publication-slide/publication-slide-2.jpg" alt="Искусство цвета - Иттен, Иоханнес">
-              <div class="publication__slide--text">
-                <span class="publication__slide--name">Типографика
-                  <span class="publication__slide--author">Рудер, Эмиль</span>
+              <img class="publication__slide-img" src="img/publication-slide/publication-slide-2.jpg" alt="Искусство цвета - Иттен, Иоханнес">
+              <div class="publication__slide-text">
+                <span class="publication__slide-name">Типографика
+                  <span class="publication__slide-author">Рудер, Эмиль</span>
                 </span>
-                <span class="publication__slide--price">2 450 руб</span>
+                <span class="publication__slide-price">2 450 руб</span>
               </div>
-              <button class="publication__slide--btn purple-btn btn">
-                <span class="publication__slide--btn-span">Заказать</span></button>
+              <button class="publication__slide-btn purple-btn btn">
+                <span class="publication__slide-span">Заказать</span></button>
             </div>
 
             <div class="publication__slide swiper-slide">
-              <img class="publication__slide--img" src="img/publication-slide/publication-slide-3.jpg" alt="Искусство цвета - Иттен, Иоханнес">
-              <div class="publication__slide--text">
-                <span class="publication__slide--name">Книга про буквы
-                  <span class="publication__slide--author">Гордон, Юрий</span>
+              <img class="publication__slide-img" src="img/publication-slide/publication-slide-3.jpg" alt="Искусство цвета - Иттен, Иоханнес">
+              <div class="publication__slide-text">
+                <span class="publication__slide-name">Книга про буквы
+                  <span class="publication__slide-author">Гордон, Юрий</span>
                 </span>
-                <span class="publication__slide--price">2 200 руб</span>
+                <span class="publication__slide-price">2 200 руб</span>
               </div>
-              <button class="publication__slide--btn purple-btn btn">
-                <span class="publication__slide--btn-span">Заказать</span></button>
+              <button class="publication__slide-btn purple-btn btn">
+                <span class="publication__slide-span">Заказать</span></button>
             </div>
 
             <div class="publication__slide swiper-slide">
-              <img class="publication__slide--img" src="img/publication-slide/publication-slide-4.jpg" alt="Искусство цвета - Иттен, Иоханнес">
-              <div class="publication__slide--text">
-                <span class="publication__slide--name">Николай Ильин
-                  <span class="publication__slide--author">Кричевский, Владимир </span>
+              <img class="publication__slide-img" src="img/publication-slide/publication-slide-4.jpg" alt="Искусство цвета - Иттен, Иоханнес">
+              <div class="publication__slide-text">
+                <span class="publication__slide-name">Николай Ильин
+                  <span class="publication__slide-author">Кричевский, Владимир </span>
                 </span>
-                <span class="publication__slide--price">1 100 руб</span>
+                <span class="publication__slide-price">1 100 руб</span>
               </div>
-              <button class="publication__slide--btn purple-btn btn">
-                <span class="publication__slide--btn-span">Заказать</span></button>
+              <button class="publication__slide-btn purple-btn btn">
+                <span class="publication__slide-span">Заказать</span></button>
             </div>
 
             <div class="publication__slide swiper-slide">
-              <img class="publication__slide--img" src="img/publication-slide/publication-slide-5.jpg" alt="Искусство цвета - Иттен, Иоханнес">
-              <div class="publication__slide--text">
-                <span class="publication__slide--name">Модульные сетки в граф...
-                  <span class="publication__slide--author">Мюллер-Брокманн, Йозеф </span>
+              <img class="publication__slide-img" src="img/publication-slide/publication-slide-5.jpg" alt="Искусство цвета - Иттен, Иоханнес">
+              <div class="publication__slide-text">
+                <span class="publication__slide-name">Модульные сетки в граф...
+                  <span class="publication__slide-author">Мюллер-Брокманн, Йозеф </span>
                 </span>
-                <span class="publication__slide--price">1 450 руб</span>
+                <span class="publication__slide-price">1 450 руб</span>
               </div>
-              <button class="publication__slide--btn purple-btn btn">
-                <span class="publication__slide--btn-span">Заказать</span></button>
+              <button class="publication__slide-btn purple-btn btn">
+                <span class="publication__slide-span">Заказать</span></button>
             </div>
 
             <div class="publication__slide swiper-slide">
-              <img class="publication__slide--img" src="img/publication-slide/publication-slide-6.jpg" alt="Искусство цвета - Иттен, Иоханнес">
-              <div class="publication__slide--text">
-                <span class="publication__slide--name">Эволюция графических ст...
-                  <span class="publication__slide--author">Хеллер, Чваст</span>
+              <img class="publication__slide-img" src="img/publication-slide/publication-slide-6.jpg" alt="Искусство цвета - Иттен, Иоханнес">
+              <div class="publication__slide-text">
+                <span class="publication__slide-name">Эволюция графических ст...
+                  <span class="publication__slide-author">Хеллер, Чваст</span>
                 </span>
-                <span class="publication__slide--price">3 200 руб</span>
+                <span class="publication__slide-price">3 200 руб</span>
               </div>
-              <button class="publication__slide--btn purple-btn btn">
-                <span class="publication__slide--btn-span">Заказать</span></button>
+              <button class="publication__slide-btn purple-btn btn">
+                <span class="publication__slide-span">Заказать</span></button>
             </div>
 
             <div class="publication__slide swiper-slide">
-              <img class="publication__slide--img" src="img/publication-slide/publication-slide-7.jpg" alt="Искусство цвета - Иттен, Иоханнес">
-              <div class="publication__slide--text">
-                <span class="publication__slide--name">Искусство и визуальное в...
-                  <span class="publication__slide--author">Арнхейм, Рудольф</span>
+              <img class="publication__slide-img" src="img/publication-slide/publication-slide-7.jpg" alt="Искусство цвета - Иттен, Иоханнес">
+              <div class="publication__slide-text">
+                <span class="publication__slide-name">Искусство и визуальное в...
+                  <span class="publication__slide-author">Арнхейм, Рудольф</span>
                 </span>
-                <span class="publication__slide--price">2 200 руб</span>
+                <span class="publication__slide-price">2 200 руб</span>
               </div>
-              <button class="publication__slide--btn purple-btn btn">
-                <span class="publication__slide--btn-span">Заказать</span></button>
+              <button class="publication__slide-btn purple-btn btn">
+                <span class="publication__slide-span">Заказать</span></button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- <section class="projects container" id="projectss">
       <h2 class="title projects__title">Проекты</h2>
@@ -1472,43 +1472,43 @@
 
       <h3 class="partners">Партнёры проектов:</h3>
 
-      <div class="partners__swiper">
+      <div class="partners">
         <div class="partners__swiper-container swiper-container">
           <div class="swiper-wrapper partners__swiper-wrapper">
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/freelands_foundation.png" alt="Логотип freelands foundation"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/freelands_foundation.png" alt="Логотип freelands foundation"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/ICA.png" alt="Логотип ICA"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/ICA.png" alt="Логотип ICA"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/workhouse.png" alt="Логотип workhouse"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/workhouse.png" alt="Логотип workhouse"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/1849.png" alt="Логотип 1849"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/1849.png" alt="Логотип 1849"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/hiscox.png" alt="Логотип hiscox"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/hiscox.png" alt="Логотип hiscox"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/canden.png" alt="Логотип canden"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/canden.png" alt="Логотип canden"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/statten.png" alt="Логотип statten"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/statten.png" alt="Логотип statten"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/watts.png" alt="Логотип watts"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/watts.png" alt="Логотип watts"></a>
             </div>
 
             <div class="swiper-slide partners__swiper-slide">
-              <a class="partners__swiper-slide--link" href="#"><img class="partners__swiper-slide--img" src="img/partners/esad.png" alt="Логотип esad"></a>
+              <a class="partners__swiper-slide-link" href="#"><img class="partners__swiper-slide-img" src="img/partners/esad.png" alt="Логотип esad"></a>
             </div>
           </div>
         </div>
@@ -1530,17 +1530,17 @@
             <address class="contacts-text__address">Леонтьевский переулок, дом 5, строение 1</address>
 
             <form class="contacts-form" action="https://postman-echo.com/post" method="POST">
-              <p class="contacts-form--title">Заказать обратный звонок</p>
+              <p class="contacts__subtitle">Заказать обратный звонок</p>
               <input class="contacts-form__input" type="text" placeholder="Имя*" required>
               <input class="contacts-form__input" type="tel" placeholder="Телефон*" required>
               <button class="contacts-form__btn purple-btn btn">
-                <span class="contacts-form__btn--text">Заказать</span>
+                <span class="contacts-form__btn-text">Заказать</span>
               </button>
             </form>
 
-            <p class="connect">Связаться в один клик</p>
+            <p class="contacts__subtitle">Связаться в один клик</p>
 
-            <div class="connect__messengers">
+            <div class="connect">
               <a href="#" class="connect__messenger whatsapp" aria-label="Связаться с нами в whatsapp"></a>
               <a href="#" class="connect__messenger telegram" aria-label="Связаться с нами в telegram"></a>
             </div>
@@ -1554,25 +1554,25 @@
   <!-- <footer class="footer">
     <div class="footer__container container">
       <a class="logo"><img src="img/logo.svg" alt="Логотип Blanchard"></a>
-      <ul class="footer__social--list">
-        <li class="footer__social--item">
-          <a href="#" class="footer__social--link vk" aria-label="Наша страница в VK">
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link vk" aria-label="Наша страница в VK">
             <svg class="vk" width="46" height="46">
               <use xlink:href="img/social.svg#vk"></use>
             </svg>
           </a>
         </li>
 
-        <li class="footer__social--item">
-          <a href="#" class="footer__social--link" aria-label="Наша страница в instagram">
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link" aria-label="Наша страница в instagram">
             <svg class="inst" width="46" height="46">
               <use xlink:href="img/social.svg#inst"></use>
             </svg>
           </a>
         </li>
 
-        <li class="footer__social--item">
-          <a href="#" class="footer__social--link fb" aria-label="Наша страница в facebook">
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link fb" aria-label="Наша страница в facebook">
             <svg class="vk" width="47" height="46">
               <use xlink:href="img/social.svg#fb"></use>
             </svg>

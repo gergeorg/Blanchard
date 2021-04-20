@@ -245,7 +245,7 @@
       margin-bottom: 3px;
   }
     .catalog__title {
-      margin-right: 35px;
+      margin-right: 30px;
       margin-top: 12px;
     }
 
@@ -293,6 +293,7 @@
 
     .catalog__head {
       margin-bottom: 12px;
+      /* flex-wrap: wrap; */
     }
 
     .country-info {
@@ -309,7 +310,7 @@
     }
   }
 
-  @media (max-width: 667px) {
+  @media (max-width: 767px) {
     .catalog {
       padding-top: 72px;
     }

@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const eventsItem = document.querySelectorAll('.events__item')
   const allEventsBtn = document.querySelector('.all-events')
-  const event = document.querySelector('.event_3')
+  const eventHiddenTablet = document.querySelector('.event-hidden-tablet')
 
   allEventsBtn.addEventListener('click', () => {
     eventsItem.forEach(el => {
@@ -201,15 +201,29 @@ document.addEventListener('DOMContentLoaded', () => {
     allEventsBtn.classList.add('event-hidden')
   })
 
-  if (window.innerWidth <= 970) {
-    event.classList.add('event-hidden')
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 970) {
+      eventHiddenTablet.classList.add('event-hidden')
+    } else {
+      eventHiddenTablet.classList.remove('event-hidden')
+    }
+
+    if (window.innerWidth <= 667) {
+      eventsItem.forEach(el => {
+        el.classList.remove('event-hidden')
+      })
+    }
+  })
+
+  if (window.innerWidth === 768) {
+    eventHiddenTablet.classList.add('event-hidden')
+  } else {
+    eventHiddenTablet.classList.remove('event-hidden')
   }
 
-  if (window.innerWidth <= 667) {
-    eventsItem.forEach(el => {
-      el.classList.remove('event-hidden')
-    })
-  }
+
+
+
 
 
 

@@ -71,16 +71,16 @@
 }
 
 
-.contacts-form__btn:focus .contacts-form__btn--text{
+.contacts-form__btn:focus .contacts-form__btn-text{
   outline: 2px solid var(--outline-color);
 }
 
-.connect {
+.contacts__subtitle {
   font-size: 24px;
   margin-bottom: 18px;
 }
 
-.connect__messengers {
+.connect {
   display: flex;
 }
 

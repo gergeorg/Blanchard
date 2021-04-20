@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 10,
-    updateOnWindowResize: true,
+    // updateOnWindowResize: true,
+    slidersPerColumnFill: 'row',
     breakpoints:{
       667:{
         slidesPerView: 2,
@@ -47,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let swiperEvent;
 
-  function mobileSlider() {
+  const mobileSlider = () => {
+  // function mobileSlider() {
     if (window.innerWidth <= 667 && eventsSlider.dataset.mobile == 'false') {
       swiperEvent = new Swiper(eventsSlider, {
         slidesPerView: 1,
@@ -86,8 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
   var publicationSwiper = new Swiper(publicationSlider, {
     slideClass: ('publication__slide'),
     slidesPerView: 2,
-    spaceBetween: 50,
+    // slidesPerGroup: 1,
     // updateOnWindowResize: true,
+    spaceBetween: 35,
     pagination: {
       el: '.publication__swiper-pagination',
       type: 'fraction',
@@ -98,16 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     breakpoints:{
-      // 320:{
-      //   slidesPerView: 2,
-      //   },
-
-      // 1024:{
-      //   spaceBetween: 30,
-      //   },
+      970:{
+        spaceBetween: 50,
+      },
 
       1500:{
-        // spaceBetween: 50,
         slidesPerView: 3,
       }
     }
@@ -115,17 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // partners swiper
 
-  // const partnersSlider = document.querySelector('.partners__swiper-container');
+  const partnersSlider = document.querySelector('.partners__swiper-container');
 
-  // var partnersSwiper = new Swiper(partnersSlider, {
-  //   loop: true,
-  //   slideClass: ('partners__swiper-slide'),
-  //   slidesPerView: 3,
-  //   spaceBetween: 50,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   }
-  // })
+  var partnersSwiper = new Swiper(partnersSlider, {
+    loop: true,
+    slideClass: ('partners__swiper-slide'),
+    slidesPerView: 3,
+    spaceBetween: 50,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  })
 
 })
