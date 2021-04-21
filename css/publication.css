@@ -71,6 +71,10 @@
   border-radius: 100%;
 }
 
+.publication__form-icon {
+  display: none;
+}
+
 .publication__form-text {
   color: var(--white-color);
   text-align: center;
@@ -322,8 +326,9 @@ input[type=number] {
     /* padding-bottom: 83px; */
   }
   .publication__category {
-    height: 230px;
+    /* height: 230px; */
     /* column-gap: 52px; */
+    height: auto;
     column-count: 1;
     flex-wrap: nowrap;
   }
@@ -339,9 +344,17 @@ input[type=number] {
     padding: 10px 0;
     margin-bottom: 7px;
     text-align: left;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
   }
+
+  .publication__form-label {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+
 
   .price {
     margin-top: 35px;
@@ -365,9 +378,12 @@ input[type=number] {
   }
 
 
-  .publication__form-uncheck {
+  .publication__form-icon {
     color: #c283f3;
-    font-size: 23px;
+  }
+
+  .publication__form-icon svg {
+    fill: #c283f3;
   }
 
   .publication__form-checkbox::after {
@@ -378,23 +394,22 @@ input[type=number] {
     top: 11px;
   }
 
-  /* .publication__btn-text {
+  .publication__form-label {
+    display: none;
 
-  } */
-
-
-  /* временно */
-
-  .publication__category {
-    height: 20px;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
   }
 
-  .publication__category.active {
-    height: auto;
+  .publication__form-label.active {
+    display: block;
   }
 
+  .publication__form-input.active {
+    display: block;
+  }
+
+  .publication__form-input[type="checkbox"]:checked + .publication__form-checkbox .publication__form-icon {
+    display: block;
+  }
 }
 
 

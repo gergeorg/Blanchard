@@ -168,6 +168,7 @@
   .events__item-bg {
     height: 197px;
     background-size: 113%;
+    max-width: 100%;
   }
 
   .events__item-text {

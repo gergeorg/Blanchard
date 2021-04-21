@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mobileSlider = () => {
   // function mobileSlider() {
-    if (window.innerWidth <= 667 && eventsSlider.dataset.mobile == 'false') {
+    if (window.innerWidth <= 767 && eventsSlider.dataset.mobile == 'false') {
       swiperEvent = new Swiper(eventsSlider, {
         slidesPerView: 1,
         slidesPerGroup: 1,
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       eventsSlider.dataset.mobile = 'true';
     }
 
-    if (window.innerWidth > 667) {
+    if (window.innerWidth > 767) {
       eventsSlider.dataset.mobile = 'false';
 
         if (eventsSlider.classList.contains('swiper-container-initialized')) {

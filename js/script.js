@@ -187,21 +187,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // events
+  // ***events***
 
   const eventsItem = document.querySelectorAll('.events__item')
   const allEventsBtn = document.querySelector('.all-events')
   const eventHiddenTablet = document.querySelector('.event-hidden-tablet')
 
-  allEventsBtn.addEventListener('click', () => {
-    eventsItem.forEach(el => {
-      el.classList.remove('event-hidden')
+  //функция 'показать все события'
+  const showMore = () => {
+    allEventsBtn.addEventListener('click', () => {
+      eventsItem.forEach(el => {
+        el.classList.remove('event-hidden')
+      })
+
+      allEventsBtn.classList.add('event-hidden')
     })
+  }
 
-    allEventsBtn.classList.add('event-hidden')
-  })
 
-  window.addEventListener('resize', () => {
+  //функция 'скрытия событий'
+  const eventHidden = () => {
     if (window.innerWidth <= 970) {
       eventHiddenTablet.classList.add('event-hidden')
     } else {
@@ -213,13 +218,55 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.remove('event-hidden')
       })
     }
-  })
-
-  if (window.innerWidth === 768) {
-    eventHiddenTablet.classList.add('event-hidden')
-  } else {
-    eventHiddenTablet.classList.remove('event-hidden')
   }
+
+  // ***publication***
+
+  const publicationBtn = document.querySelector('.publication__btn');
+  const publicationFormLabel = document.querySelectorAll('.publication__form-label');
+  const publicationFormInput = document.querySelectorAll('.publication__form-input');
+  const publicationFormIcon = document.querySelectorAll('.publication__form-icon');
+
+
+  const publicationAccordion = () => {
+    publicationBtn.addEventListener('click', () => {
+      //сюда добавить стрелку
+      publicationFormLabel.forEach(el => {
+        el.classList.toggle('active')
+      })
+    })
+  }
+
+  const publicationCheck = () => {
+    for (let i = 0; i < publicationFormInput.length; i++) {
+      const el = publicationFormInput[i];
+      el.addEventListener('change', () => {
+        el.parentNode.classList.toggle('active');
+      })
+    }
+
+    //отображение активного checkbox
+    publicationFormInput.forEach(el => {
+      if (el.checked) {
+        el.parentNode.classList.add('active')
+      }
+    })
+  }
+
+
+
+
+
+
+
+
+
+
+  // if (window.innerWidth === 768) {
+  //   eventHiddenTablet.classList.add('event-hidden')
+  // } else {
+  //   eventHiddenTablet.classList.remove('event-hidden')
+  // }
 
 
 
@@ -249,6 +296,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 
 
+  window.addEventListener('resize', () => {
+    eventHidden();
+  })
+
+  showMore();
+  eventHidden();
+  publicationAccordion();
+  publicationCheck();
 })
 
 
