@@ -225,14 +225,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const publicationBtn = document.querySelector('.publication__btn');
   const publicationFormLabel = document.querySelectorAll('.publication__form-label');
   const publicationFormInput = document.querySelectorAll('.publication__form-input');
-  const publicationFormIcon = document.querySelectorAll('.publication__form-icon');
+  // const publicationFormIcon = document.querySelectorAll('.publication__form-icon');
 
+  const showActiveCheckbox = () => {
+    publicationFormInput.forEach(el => {
+      if (el.checked) {
+        el.parentNode.classList.add('active')
+      }
+    })
+  }
 
   const publicationAccordion = () => {
     publicationBtn.addEventListener('click', () => {
       //сюда добавить стрелку
       publicationFormLabel.forEach(el => {
         el.classList.toggle('active')
+        showActiveCheckbox();
       })
     })
   }
@@ -242,15 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = publicationFormInput[i];
       el.addEventListener('change', () => {
         el.parentNode.classList.toggle('active');
+        showActiveCheckbox();
       })
     }
 
-    //отображение активного checkbox
-    publicationFormInput.forEach(el => {
-      if (el.checked) {
-        el.parentNode.classList.add('active')
-      }
-    })
+    showActiveCheckbox();
   }
 
 

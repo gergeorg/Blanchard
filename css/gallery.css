@@ -381,7 +381,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 455px;
+    /* height: 455px; */
+    height: 470px;
   }
 
   .gallery__swiper-slide {
