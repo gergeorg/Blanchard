@@ -360,7 +360,7 @@
 @media (max-width: 667px) {
   .gallery {
     padding-top: 55px;
-    padding-bottom: 173px;
+    padding-bottom: 158px;
   }
 
   .gallery__title {
@@ -419,6 +419,6 @@
   }
 
   .gallery__swiper-navagation {
-    margin-bottom: 38px;
+    margin-bottom: 54px;
   }
 }

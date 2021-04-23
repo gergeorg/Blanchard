@@ -326,8 +326,6 @@ input[type=number] {
     /* padding-bottom: 83px; */
   }
   .publication__category {
-    /* height: 230px; */
-    /* column-gap: 52px; */
     height: auto;
     column-count: 1;
     flex-wrap: nowrap;
@@ -336,8 +334,6 @@ input[type=number] {
   .publication__title {
     margin-bottom: 15px;
   }
-
-
 
   .publication__btn {
     width: 100%;
@@ -354,21 +350,21 @@ input[type=number] {
     margin-bottom: 10px;
   }
 
-
-
   .price {
-    margin-top: 35px;
+    margin-top: 18px;
   }
 
   .price-form {
     max-width: 95%;
   }
 
-
-
-  .price-form__to { /* хз надо ли, потом чекну */
+  .price-form__to {
     padding-left: 0px;
     padding-right: 10px;
+  }
+
+  .price-form-currency {
+    padding-left: 10px;
   }
 
   .publication__form-checkbox {
@@ -376,7 +372,6 @@ input[type=number] {
     justify-content: space-between;
     align-items: center;
   }
-
 
   .publication__form-icon {
     color: #c283f3;
