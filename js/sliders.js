@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let swiperEvent;
 
-  const mobileSlider = () => {
+  const mobileEventsSlider = () => {
   // function mobileSlider() {
     if (window.innerWidth <= 767 && eventsSlider.dataset.mobile == 'false') {
       swiperEvent = new Swiper(eventsSlider, {
@@ -75,41 +75,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  mobileSlider();
+  mobileEventsSlider();
 
   window.addEventListener('resize', () => {
-    mobileSlider();
+    mobileEventsSlider();
   });
 
   // publication slider
 
   const publicationSlider = document.querySelector('.publication__swiper-container');
 
-  var publicationSwiper = new Swiper(publicationSlider, {
-    slideClass: ('publication__slide'),
-    slidesPerView: 2,
-    // slidesPerGroup: 1,
-    // updateOnWindowResize: true,
-    spaceBetween: 35,
-    pagination: {
-      el: '.publication__swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.publication__swiper-button-next',
-      prevEl: '.publication__swiper-button-prev',
-    },
+  let swiperPublication;
+  const desctopSlider = () => {
 
-    breakpoints:{
-      970:{
-        spaceBetween: 50,
-      },
+    if (window.innerWidth >= 767 && publicationSlider.dataset.desktop == 'true') {
+      swiperPublication = new Swiper(publicationSlider, {
+        slideClass: ('publication__slide'),
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          el: '.publication__swiper-pagination',
+          type: 'fraction',
+        },
 
-      1500:{
-        slidesPerView: 3,
-      }
+        navigation: {
+          nextEl: '.publication__swiper-button-next',
+          prevEl: '.publication__swiper-button-prev',
+        },
+
+        breakpoints:{
+          970:{
+            slidesPerView: 2,
+            spaceBetween: 42,
+            slidesPerGroup: 1,
+          },
+
+          1500:{
+            spaceBetween: 50,
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+          }
+        }
+      })
+
+      publicationSlider.dataset.desktop == 'false'
     }
+
+    if (window.innerWidth <= 767) {
+      publicationSlider.dataset.mobile = 'false';
+
+        if (publicationSlider.classList.contains('swiper-container-initialized')) {
+          swiperPublication.destroy();
+        }
+    }
+  }
+
+  desctopSlider();
+
+  window.addEventListener('resize', () => {
+    desctopSlider();
   })
+
 
   // partners swiper
 

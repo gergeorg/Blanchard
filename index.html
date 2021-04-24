@@ -33,6 +33,7 @@
     <script defer src="libs/simplebar.min.js"></script>
     <script defer src="libs/swiper-bundle.min.js"></script>
     <script defer src="libs/focus-visible.js"></script>
+    <script defer src="js/modal.js"></script>
     <script defer src="js/sliders.js"></script>
     <script defer src="js/script.js"></script>
     <title>Blanchard - художественная галерея</title>
@@ -1252,20 +1253,24 @@
         <form class="publication__form" action="https://postman-echo.com/post" method="POST">
           <h2 class="title publication__title">Издания</h2>
 
-          <button class="publication__btn btn publication__subtitle" type="button"><span class="publication__btn-text">Категории</span></button>
+          <button class="publication__btn btn publication__subtitle" type="button">
+            <span class="publication__btn-text">Категории</span>
+            <svg class="publication__btn-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.3393 5.16934L6.16992 10.3387L1.00058 5.16934"/>
+            </svg>
+          </button>
 
           <div class="publication__category">
             <label class="publication__form-label">
               <input class="publication__form-input visually-hidden" type="checkbox" name="best-seller">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Бестселлеры</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1274,13 +1279,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="Art">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Искусство</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1289,13 +1293,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="Architecture">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Архитектура</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1304,13 +1307,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" checked name="Design">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Дизайн</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1319,13 +1321,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="Fashion">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Мода</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1334,13 +1335,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="for_children">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Детям</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1349,13 +1349,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="imaginative_literature">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Художественная литература</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1364,13 +1363,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="publicism">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Публицистика</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1379,13 +1377,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="travel_guides">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Путеводители</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1394,13 +1391,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="Philosophy">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Философия</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1409,13 +1405,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="educational_literature">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Учебная литература</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1424,13 +1419,12 @@
               <input class="publication__form-input visually-hidden" type="checkbox" name="magazines-newspapers">
               <span class="publication__form-checkbox">
                 <span class="publication__form-text">Журналы и газеты</span>
-                <span class="publication__form-icon">
-                  <svg class="categories__close" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="publication__form-icon" width="12" height="12" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)"/>
                       <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)"/>
                     </g>
-                </svg>
+                  </svg>
                 </span>
               </span>
             </label>
@@ -1441,19 +1435,20 @@
           <div class="price-form">
             <label class="price-form__label">
               <span class="price-form__from">От</span>
-              <input class="price-form__input" type="number" name="price-from">
+              <input class="price-form__input" type="number" value="50" name="price-from">
             </label>
 
+            <span class="price-form__to">до</span>
+
             <label class="price-form__label">
-              <span class="price-form__to">До</span>
-              <input class="price-form__input" type="number" name="price-to">
+              <input class="price-form__input" type="number" value="25000" name="price-to">
               <span class="price-form-currency">руб.</span>
             </label>
 
           </div>
         </form>
 
-        <!-- <div class="publication__swiper-container swiper-container">
+        <div class="publication__swiper-container swiper-container" data-desktop="true">
           <div class="publication__swiper-navagation">
             <div class="publication__swiper-button-prev swiper-button-prev"></div>
             <div class="swiper-pagination publication__swiper-pagination"></div>
@@ -1512,7 +1507,7 @@
             <div class="publication__slide swiper-slide">
               <img class="publication__slide-img" src="img/publication-slide/publication-slide-5.jpg" alt="Искусство цвета - Иттен, Иоханнес">
               <div class="publication__slide-text">
-                <span class="publication__slide-name">Модульные сетки в граф...
+                <span class="publication__slide-name">Модульные сетки в графическом дизайне
                   <span class="publication__slide-author">Мюллер-Брокманн, Йозеф </span>
                 </span>
                 <span class="publication__slide-price">1 450 руб</span>
@@ -1524,7 +1519,7 @@
             <div class="publication__slide swiper-slide">
               <img class="publication__slide-img" src="img/publication-slide/publication-slide-6.jpg" alt="Искусство цвета - Иттен, Иоханнес">
               <div class="publication__slide-text">
-                <span class="publication__slide-name">Эволюция графических ст...
+                <span class="publication__slide-name">Эволюция графических стилей
                   <span class="publication__slide-author">Хеллер, Чваст</span>
                 </span>
                 <span class="publication__slide-price">3 200 руб</span>
@@ -1536,7 +1531,7 @@
             <div class="publication__slide swiper-slide">
               <img class="publication__slide-img" src="img/publication-slide/publication-slide-7.jpg" alt="Искусство цвета - Иттен, Иоханнес">
               <div class="publication__slide-text">
-                <span class="publication__slide-name">Искусство и визуальное в...
+                <span class="publication__slide-name">Искусство и визуальное восприятие
                   <span class="publication__slide-author">Арнхейм, Рудольф</span>
                 </span>
                 <span class="publication__slide-price">2 200 руб</span>
@@ -1545,7 +1540,7 @@
                 <span class="publication__slide-span">Заказать</span></button>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
 

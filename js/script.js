@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchBtn = document.querySelector('.search-button');
   const searchInput = document.querySelector('.search-mobile__input');
   const searchClose = document.querySelector('.search-mobile__close');
-  const modal = document.querySelector('.overlay')
-  const modalClose = document.querySelector('.modal__close')
-  const gallerswiperButton = document.querySelectorAll('.gallery__swiper-button')
+
+
 
 
   // dropdown
@@ -116,17 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  //modal
 
-  gallerswiperButton.forEach((el) => {
-    el.addEventListener('click', () => {
-      modal.classList.add('show');
-    })
-  })
-
-  modalClose.addEventListener('click', () => {
-    modal.classList.remove('show');
-  })
 
 
   // change arrow accordion
@@ -225,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const publicationBtn = document.querySelector('.publication__btn');
   const publicationFormLabel = document.querySelectorAll('.publication__form-label');
   const publicationFormInput = document.querySelectorAll('.publication__form-input');
-  // const publicationFormIcon = document.querySelectorAll('.publication__form-icon');
+  const publicationBtnArrow = document.querySelector('.publication__btn-arrow');
 
   const showActiveCheckbox = () => {
     publicationFormInput.forEach(el => {
@@ -237,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const publicationAccordion = () => {
     publicationBtn.addEventListener('click', () => {
-      //сюда добавить стрелку
+      publicationBtnArrow.classList.toggle('arrow-active');
       publicationFormLabel.forEach(el => {
         el.classList.toggle('active')
         showActiveCheckbox();
