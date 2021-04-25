@@ -114,10 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     itemSelectText: '',
   });
 
-
-
-
-
   // change arrow accordion
 
   accordionBtn.forEach(function(el) {
@@ -134,6 +130,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
   })
+
+      //modal
+  const modal = document.querySelector('.overlay')
+  const modalClose = document.querySelector('.modal__close')
+  const gallerswiperButton = document.querySelectorAll('.gallery__swiper-button')
+
+
+  gallerswiperButton.forEach((el) => {
+    el.addEventListener('click', () => {
+      modal.classList.add('show');
+    })
+  })
+
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('show');
+  })
+
 
   // tabs counter
 
