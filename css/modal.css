@@ -11,6 +11,10 @@
   background-color: rgba(0,0,0,0.3);
 }
 
+.modal__content {
+  display: flex;
+}
+
 .overlay.show {
   display: flex;
 }
@@ -20,7 +24,7 @@
   max-width: 900px;
   max-height: 500px;
   position: relative;
-  display: flex;
+  /* display: flex; */
 }
 
 .modal__image-picture {

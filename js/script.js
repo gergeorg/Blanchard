@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const showActiveCheckbox = () => {
     publicationFormInput.forEach(el => {
-      if (el.checked) {
+      if (el.checked === true) {
         el.parentNode.classList.add('active')
       }
     })
@@ -251,13 +251,44 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < publicationFormInput.length; i++) {
       const el = publicationFormInput[i];
       el.addEventListener('change', () => {
-        el.parentNode.classList.toggle('active');
+        if (!el.checked && !publicationBtnArrow.classList.contains('arrow-active')) {
+          el.parentNode.classList.remove('active');
+        }
+
         showActiveCheckbox();
       })
     }
 
     showActiveCheckbox();
   }
+
+
+  // const showActiveCheckbox = () => {
+  //   publicationFormInput.forEach(el => {
+  //     if (el.checked === true) {
+  //       el.parentNode.classList.add('active')
+  //     }
+  //   })
+  // }
+
+  // const publicationAccordion = () => {
+  //   publicationBtn.addEventListener('click', () => {
+  //     publicationBtnArrow.classList.toggle('arrow-active');
+  //     publicationFormLabel.forEach(el => {
+  //       el.classList.toggle('active')
+  //       showActiveCheckbox();
+  //     })
+  //   })
+  // }
+
+  // const publicationCheck = () => {
+  //   for (let input of publicationFormInput){
+  //     input.addEventListener('change', () => {
+  //       input.parentNode.classList.toggle('active');
+  //     })
+  //     showActiveCheckbox();
+  //   }
+  // }
 
 
 
