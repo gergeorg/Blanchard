@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 10,
-    // updateOnWindowResize: true,
     slidersPerColumnFill: 'row',
     breakpoints:{
       667:{
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let swiperEvent;
 
   const mobileEventsSlider = () => {
-  // function mobileSlider() {
     if (window.innerWidth <= 767 && eventsSlider.dataset.mobile == 'false') {
       swiperEvent = new Swiper(eventsSlider, {
         slidesPerView: 1,
@@ -93,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slideClass: ('publication__slide'),
         slidesPerView: 2,
         slidesPerGroup: 2,
+        spaceBetween: 10,
         pagination: {
           el: '.publication__swiper-pagination',
           type: 'fraction',
@@ -106,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints:{
           970:{
             slidesPerView: 2,
-            spaceBetween: 42,
+            spaceBetween: 50,
             slidesPerGroup: 1,
           },
 
@@ -142,14 +141,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const partnersSlider = document.querySelector('.partners__swiper-container');
 
   var partnersSwiper = new Swiper(partnersSlider, {
-    loop: true,
     slideClass: ('partners__swiper-slide'),
-    slidesPerView: 3,
-    spaceBetween: 50,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    loop: true,
+    spaceBetween: 30,
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints:{
+
+      668: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 30,
+      },
+
+      1600:{
+        spaceBetween: 50,
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+      }
     }
   })
-
 })

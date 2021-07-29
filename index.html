@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/modal.css">
 
-    <!-- <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API-ключ&lang=ru_RU"></script> -->
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API-ключ&lang=ru_RU"></script>
     <script defer src="libs/jquery-3.5.1.min.js"></script>
     <script defer src="libs/jquery-ui.min.js"></script>
     <script defer src="libs/choices.min.js"></script>
@@ -1532,10 +1532,10 @@
       </div>
     </section>
 
-    <!-- <section class="projects container" id="projectss">
+    <section class="projects container" id="projectss">
       <h2 class="title projects__title">Проекты</h2>
 
-      <p class="projects__descr">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
+      <p class="projects__descr">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с не уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за&nbsp;чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
         <span class="tooltip">
           <span class="tooltip-marker"></span>
           <span class="tooltip-popup">Пример современных тенденций - современная методология разработки</span>
@@ -1550,12 +1550,12 @@
           <span class="tooltip-marker"></span>
           <span class="tooltip-popup">В стремлении повысить качество</span>
         </span>
-        предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="projects__link focus-style">blanchard-art.ru/projects/about</a>
+        предпосылок. Банальные, но неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="projects__link focus-style">blanchard-art.ru/projects/about</a>
       </p>
 
       <h3 class="partners">Партнёры проектов:</h3>
 
-      <div class="partners">
+      <div class="partners__swiper">
         <div class="partners__swiper-container swiper-container">
           <div class="swiper-wrapper partners__swiper-wrapper">
             <div class="swiper-slide partners__swiper-slide">
@@ -1599,9 +1599,9 @@
         <div class="swiper-button-prev partners__button-prev"></div>
         <div class="swiper-button-next partners__button-next"></div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="contacts" id="contacts">
+    <section class="contacts" id="contacts">
       <div class="container">
         <h2 class="title contacts__title">Контакты</h2>
       </div>
@@ -1609,8 +1609,10 @@
       <div class="contacts__content">
         <div class="container contacts__container">
           <div class="contacts-text">
-            <h3 class="contacts-text__subtitle">Шоурум №4</h3>
-            <address class="contacts-text__address">Леонтьевский переулок, дом 5, строение 1</address>
+            <h3 class="contacts-text__subtitle">Шоурум №2</h3>
+            <address class="contacts-text__address">Леонтьевский переулок, дом 5/1</address>
+
+            <div class="contacts__map"  id="map"></div>
 
             <form class="contacts-form" action="https://postman-echo.com/post" method="POST">
               <p class="contacts__subtitle">Заказать обратный звонок</p>
@@ -1621,7 +1623,7 @@
               </button>
             </form>
 
-            <p class="contacts__subtitle">Связаться в один клик</p>
+            <p class="contacts__subtitle contacts__subtitle-messenger">Связаться в один клик</p>
 
             <div class="connect">
               <a href="#" class="connect__messenger whatsapp" aria-label="Связаться с нами в whatsapp"></a>
@@ -1629,14 +1631,14 @@
             </div>
           </div>
         </div>
-        <div class="contacts__map"  id="map"></div>
+
       </div>
-    </section> -->
+    </section>
   </main>
 
-  <!-- <footer class="footer">
+  <footer class="footer">
     <div class="footer__container container">
-      <a class="logo"><img src="img/logo.svg" alt="Логотип Blanchard"></a>
+      <a class="logo footer__logo"><img src="img/logo.svg" alt="Логотип Blanchard"></a>
       <ul class="footer__social-list">
         <li class="footer__social-item">
           <a href="#" class="footer__social-link vk" aria-label="Наша страница в VK">
@@ -1663,7 +1665,7 @@
         </li>
       </ul>
     </div>
-  </footer> -->
+  </footer>
 
   <div class="overlay" id="modal">
 		<div class="modal">

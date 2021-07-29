@@ -263,35 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // const showActiveCheckbox = () => {
-  //   publicationFormInput.forEach(el => {
-  //     if (el.checked === true) {
-  //       el.parentNode.classList.add('active')
-  //     }
-  //   })
-  // }
-
-  // const publicationAccordion = () => {
-  //   publicationBtn.addEventListener('click', () => {
-  //     publicationBtnArrow.classList.toggle('arrow-active');
-  //     publicationFormLabel.forEach(el => {
-  //       el.classList.toggle('active')
-  //       showActiveCheckbox();
-  //     })
-  //   })
-  // }
-
-  // const publicationCheck = () => {
-  //   for (let input of publicationFormInput){
-  //     input.addEventListener('change', () => {
-  //       input.parentNode.classList.toggle('active');
-  //     })
-  //     showActiveCheckbox();
-  //   }
-  // }
-
-
-
 
 
 
@@ -315,22 +286,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //map
 
-  // ymaps.ready(init);
-  // function init(){
-  //   var myMap = new ymaps.Map("map", {
-  //     center: [55.75846306898368,37.601079499999905],
-  //     zoom: 17
-  //   });
+  ymaps.ready(init);
+  function init(){
+    var myMap = new ymaps.Map("map", {
+      center: [55.75846306898368,37.601079499999905],
+      zoom: 17
+    });
 
-  //   var myPlacemark = new ymaps.Placemark([55.75846306898368,37.601079499999905], {}, {
-  //     iconLayout: 'default#image',
-  //     iconImageHref: 'img/placemark.svg',
-  //     iconImageSize: [28, 40],
-  //     iconImageOffset: [-3, -42]
-  //   });
+    var myPlacemark = new ymaps.Placemark([55.75846306898368,37.601079499999905], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/placemark.svg',
+      iconImageSize: [28, 40],
+      iconImageOffset: [-3, -42]
+    });
 
-  // myMap.geoObjects.add(myPlacemark);
-  // }
+  myMap.geoObjects.add(myPlacemark);
+  }
 
 
   window.addEventListener('resize', () => {

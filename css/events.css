@@ -1,6 +1,6 @@
 .events {
-  padding-top: 78px;
-  padding-bottom: 79px;
+  padding-top: 85px;
+  padding-bottom: 78px;
 }
 
 .events__head-title {
@@ -18,7 +18,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 47px;
   margin-right: 3%;
   max-width: 31.3%;
   min-height: 700px;
@@ -69,10 +69,6 @@
   line-height: 16px;
   text-align: right;
   color: #999999;
-}
-
-.events__date {
-  margin-bottom: 4px;
 }
 
 .events__title {
@@ -184,7 +180,7 @@
 @media (max-width: 970px) {
   .events {
     padding-top: 75px;
-    padding-bottom: 81px;
+    padding-bottom: 78px;
   }
 
   .events__head-title {
@@ -220,6 +216,10 @@
     min-width: 100%;
     min-height: 683px;
     margin-right: 0;
+  }
+
+  .events__item-bg {
+    height: 200px;
   }
 
   .events__item-text {

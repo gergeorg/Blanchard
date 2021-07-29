@@ -255,7 +255,6 @@
 
     .painter {
       max-width: 47%;
-      /* padding-left: 5px; */
     }
 
     .painter__info {
@@ -293,7 +292,6 @@
 
     .catalog__head {
       margin-bottom: 12px;
-      /* flex-wrap: wrap; */
     }
 
     .country-info {
@@ -305,14 +303,14 @@
     }
 
     .painter__photo {
-      margin-bottom: 24px;
+      margin-bottom: 29px;
       margin-top: 51px;
     }
   }
 
   @media (max-width: 767px) {
     .catalog {
-      padding-top: 72px;
+      padding-top: 40px;
     }
 
     .catalog__head {
@@ -383,7 +381,7 @@
 
     .painter__photo {
       margin-top: 0;
-      margin-bottom: 17px;
+      margin-bottom: 13px;
     }
 
     .painter__name {
