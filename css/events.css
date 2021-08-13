@@ -91,16 +91,22 @@
   left: 50px;
   color:var(--hover-color);
   text-decoration: underline;
-  transition: font-weight .3s ease-in-out, color .3s ease-in-out;
+  transition: font-weight .3s ease-in-out, color .3s ease-in-out, background .3s ease-in-out;
 }
 
 .events__more:hover {
-  font-weight: bold;
+  color: var(--outline-color);
+}
+
+
+.events__more:focus {
+  color: var(--white-color);
+  background: var(--hover-color);
 }
 
 .events__more:active {
-  font-weight: bold;
-  color: var(--outline-color);
+  color: var(--black-color);
+  background: var(--white-color);
 }
 
 .all-events {

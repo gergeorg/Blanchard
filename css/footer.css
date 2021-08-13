@@ -21,8 +21,13 @@
   transition: fill .3s ease-in-out;
 }
 
-.footer__social-link:hover {
+.footer__social-link:hover,
+.footer__social-link:focus {
   fill: var(--white-color);
+}
+
+.footer__social-link:active {
+  fill: var(--hover-color);
 }
 
 

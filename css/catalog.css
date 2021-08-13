@@ -30,6 +30,16 @@
   background-position: center center;
 }
 
+.tabs__btn:hover,
+.tabs__btn:focus {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.tabs__btn:active {
+  border: 2px solid #9D5CD0;
+  border-radius: 50%;
+}
+
 .tabs__btn-active {
   border: 2px solid #9D5CD0;
   border-radius: 50%;
@@ -131,6 +141,27 @@
   height: 113px;
   text-align: left;
   border-bottom: 1px solid #cacaca;
+  border-top: 1px solid #cacaca;
+  margin-top: -1px;
+}
+
+.accordion__btn:hover {
+  border-bottom: 1px solid #D1A9F0;
+  border-top: 1px solid #D1A9F0;
+}
+
+.accordion__btn:hover .accordion__arrow-btn {
+  background-color: #D1A9F0;
+}
+
+.accordion__btn:focus .accordion__title{
+  background: var(--outline-color);
+  color: var(--white-color)
+}
+
+.accordion__btn:active {
+  border-bottom: 1px solid var(--hover-color);
+  border-top: 1px solid var(--hover-color);
 }
 
 .accordion__btn::after {
@@ -153,7 +184,12 @@
 }
 
 .accordion__title:hover {
-  color:var(--hover-color)
+  color:var(--hover-color);
+}
+
+.accordion__btn:active .accordion__title {
+  color:var(--outline-color);
+  background: var(--white-color);
 }
 
 .accordion__arrow-btn {
@@ -220,7 +256,13 @@
   text-decoration: underline;
 }
 
+.accordion__painter-link:focus {
+  background: var(--outline-color);
+  color: var(--white-color);
+}
+
 .accordion__painter-link:active {
+  background: var(--white-color);
   color: var(--outline-color);
 }
 
