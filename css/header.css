@@ -24,24 +24,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 30px;
+  padding-top: 29px;
   padding-bottom: 27px;
 }
 
 .header__bottom-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 19px;
+  padding-bottom: 22px;
 }
 
 .nav-top {
-  margin-right: 40px;
+  margin-right: 100px;
 }
 
 .nav-top__list {
@@ -78,8 +74,7 @@
   transition: fill .3s ease-in-out;
 }
 
-.sign-in:hover svg,
-.search:hover svg {
+.sign-in:hover svg {
   fill: #C283F3;
 }
 
@@ -94,13 +89,13 @@
 
 .header__bottom {
   background: rgba(0, 0, 0, 0.4);
-  padding-top: 16px;
-  padding-bottom: 16px;
+  /* padding-top: 16px;
+  padding-bottom: 16px; */
+  /* padding-top: 21px;
+  padding-bottom: 22px; */
 }
 
 .nav__art {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -287,11 +282,38 @@
 .search,
 .search-mobile {
   background: transparent;
-  padding: 4px 8px;
+
+  /* padding: 4px 8px; */
+}
+
+.search {
+  /* margin-left: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 5px; */
+
+}
+
+.search-btn {
+  margin-top: 7px;
+  /* margin-right: 15px; */
+
+  /* padding-top: 5px; */
 }
 
 .search-button {
-  padding-top: 3px;
+  /* padding-top: 3px; */
+  width: 27px;
+  height: 27px;
+  /* margin-right: 7px; */
+  /* margin-top: 7px; */
+}
+
+.search__input {
+  margin-top: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .search__input,
@@ -304,11 +326,12 @@
   -webkit-transition: border .3s ease-in-out;
   transition: border .3s ease-in-out;
   color: var(--white-color);
-  padding-left: 7px;
+  /* padding-left: 7px; */
   font-size: 18px;
   caret-color: #D1A9F0;
 }
 
+/* скрытие крестика */
 .search__input::-webkit-search-cancel-button,
 .search-mobile__input::-webkit-search-cancel-button {
   display: none;
@@ -318,13 +341,13 @@
   border-bottom: solid 1px #C283F3;
 }
 
-.search:focus-within .search-button svg {
-  fill: #C283F3;
+.search:focus-within .search__input {
+  border-bottom: solid 1px #C283F3;
 }
 
-.search:focus-within {
+/* .search:focus-within {
   outline: 2px solid var(--hover-color);
-}
+} */
 
 input[type="search"]::-moz-placeholder {color: rgba(255, 255, 255, 0.85);}
 input[type="search"]::-webkit-input-placeholder {color:rgba(255, 255, 255, 0.85);}

@@ -82,7 +82,7 @@
 }
 
 .hero__text {
-  max-width: 33%;
+  max-width: 35%;
 }
 
 .hero__text-title{
@@ -119,7 +119,7 @@
 }
 
 .hero__button:focus {
-  border: 3px solid var(--outline-color);
+  /* border: 3px solid var(--outline-color); */
   outline: none;
 }
 

@@ -1,14 +1,14 @@
 .about__container {
-  padding-top: 207px;
-  padding-bottom: 70px;
+  padding-top: 209px;
+  padding-bottom: 71px;
 }
 
 .about__title {
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 }
 
 .about__descr {
-  max-width: 66%;
+  max-width: 68%;
   line-height: 200%;
 }
 

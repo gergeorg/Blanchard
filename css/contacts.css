@@ -48,11 +48,14 @@
   border: 1px solid #333333;
   box-sizing: border-box;
   border-radius: 100px;
+  transition: background-color .3s ease-in-out;
 }
 
-.contacts-form__input:focus {
-  outline: none;
-  border: 2px solid var(--outline-color);
+.contacts-form__input:focus,
+.contacts-form__input:hover {
+  background-color: #EAEAEA;
+  /* outline: none;
+  border: 2px solid var(--outline-color); */
 
 }
 
