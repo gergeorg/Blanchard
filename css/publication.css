@@ -144,18 +144,24 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.price-form__from {
+/* .price-form__from {
   padding-right: 14px;
-}
+} */
 
 .price-form__to {
   padding-left: 7px;
-  padding-right: 10px;
+  padding-right: 7px;
 }
 
 .price-form__currency {
   padding-left: 12px;
 }
+
+input[type="number"]::-moz-placeholder {color: rgba(255, 255, 255, 0.85);}
+input[type="number"]::-webkit-input-placeholder {color:rgba(255, 255, 255, 0.85);}
+input[type="number"]:-ms-input-placeholder {color:rgba(255, 255, 255, 0.85);}
+input[type="number"]::-ms-input-placeholder {color: rgba(255, 255, 255, 0.85);}
+input[type="number"]::placeholder {color: rgba(255, 255, 255, 0.85);}
 
 
 .publication__swiper-container {
