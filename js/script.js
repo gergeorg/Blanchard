@@ -332,3 +332,28 @@ $(document).ready(function(){
 
 });
 
+
+
+
+tippy('.tooltip-1', {
+  content: 'Пример современных тенденций - современная методология разработки',
+  theme: 'tooltip-theme',
+  trigger: 'click',
+  trigger: 'focus',
+});
+
+tippy('.tooltip-2', {
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  theme: 'tooltip-theme',
+  trigger: 'click',
+  trigger: 'focus',
+});
+
+tippy('.tooltip-3', {
+  content: 'В стремлении повысить качество',
+  theme: 'tooltip-theme',
+  trigger: 'click',
+  trigger: 'focus',
+});
+
+

@@ -20,7 +20,7 @@
 }
 
 .contacts-text__subtitle {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 600;
   font-size: 24px;
 }
@@ -44,7 +44,7 @@
   width: 400px;
   height: 40px;
   padding-left: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   border: 1px solid #333333;
   box-sizing: border-box;
   border-radius: 100px;
@@ -61,8 +61,14 @@
 
 .contacts-form__btn {
   max-width: 157px;
-  padding: 17px 35px;
-  margin-bottom: 38px;
+  padding: 13px 35px;
+  margin-bottom: 41px;
+}
+
+.contacts-form__btn-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .contacts-form__btn:hover {
@@ -89,8 +95,8 @@
 
 .connect__messenger {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 41px;
+  height: 41px;
   border: 2px solid transparent;
   background-repeat: no-repeat;
   background-position: center;

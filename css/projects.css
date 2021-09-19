@@ -8,7 +8,7 @@
 }
 
 .projects__descr {
-  max-width: 67%;
+  max-width: 65.7%;
   margin-bottom: 24px;
   line-height: 32px;
 }
@@ -27,75 +27,67 @@
 }
 
 
-.tooltip-marker {
-  display: inline-block;
-  position: relative;
-  width: 18px;
-  height: 18px;
-  background-color: var(--white-color);
-  border: 1px solid var(--hover-color);
-  border-radius: 100%;
-  transition: background-color .3s ease-in-out, color .3s ease-in-out;
-}
-
-.tooltip-marker::after {
-  content: 'i';
-  position: absolute;
-  top: -8px;
-  left: 6px;
-  color: var(--hover-color);
-}
-
 .tooltip {
-  position: relative;
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 
+.tooltip-marker {
+  padding-top: 6px;
+  padding-right: 4px;
+  width: 22px;
+  height: 22px;
+  fill: transparent;
+  transition: fill .3s ease-in-out;
+}
 
-.tooltip:hover .tooltip-marker {
+.tooltip-marker__circle {
+  stroke: var(--hover-color);
+}
+
+.tooltip-marker__icon {
+  fill: var(--black-color);
+}
+
+.tooltip:hover .tooltip-marker,
+.tooltip:focus .tooltip-marker {
+  fill: #D1A9F0;
+}
+
+.tooltip:active .tooltip-marker__circle {
+  fill: var(--hover-color);
+}
+
+.tooltip:active .tooltip-marker__icon {
+  fill: var(--white-color);
+}
+
+.tooltip:focus {
+  outline: none;
+}
+
+.tippy-box[data-theme~='tooltip-theme'] {
   background-color: var(--hover-color);
-}
-
-.tooltip:hover .tooltip-marker::after {
   color: var(--white-color);
-}
-
-.tooltip-popup {
-  content: '';
-  width: 264px;
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 11px);
-  transform: translateX(-50%);
-  padding: 8px 11px;
-  background: var(--hover-color);
+  font-family: 'OpenSans';
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  color: var(--white-color);
 }
 
-.tooltip-popup::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -7px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  border-style: solid;
-  border-width: 7px 7px 0 7px;
-  border-color: var(--hover-color) transparent transparent transparent;
+.tippy-box[data-theme~='tooltip-theme'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: var(--hover-color);
 }
-
-.tooltip:hover .tooltip-popup,
-.tooltip:hover .tooltip-popup::before {
-  opacity: 1;
-  visibility: visible;
+.tippy-box[data-theme~='tooltip-theme'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: var(--hover-color);
+}
+.tippy-box[data-theme~='tooltip-theme'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: var(--hover-color);
+}
+.tippy-box[data-theme~='tooltip-theme'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: var(--hover-color);
 }
 
 .partners {
@@ -124,18 +116,26 @@
   border: 1px solid #cacaca;
 }
 
-.partners__swiper-slide-link:focus {
+.partners__swiper-slide-link:focus,
+.partners__swiper-slide-link:active {
   outline: none;
-  border: 2px solid var(--outline-color);
+  border: 2px solid var(--hover-color);
 }
 
 .partners__swiper-slide-img {
   filter: grayscale(100%);
+  opacity: 0.5;
   transition: filter .3s ease-in-out;
 }
 
 .partners__swiper-slide-link:hover .partners__swiper-slide-img {
   filter: grayscale(0%);
+  opacity: 1;
+}
+
+.partners__swiper-slide-link:active .partners__swiper-slide-img {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .partners__button-prev,
