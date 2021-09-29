@@ -114,23 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     itemSelectText: '',
   });
 
-  // change arrow accordion
-
-  accordionBtn.forEach(function(el) {
-    const btn = el.querySelector('.accordion__arrow-btn')
-    el.addEventListener('click', function(e) {
-      btns.forEach(item => {
-        item.classList.remove('accordion__arrow-btn--active')
-      })
-
-      if (el.classList.contains('ui-accordion-header-active')) {
-        btn.classList.add('accordion__arrow-btn--active')
-        } else {
-        btn.classList.remove('accordion__arrow-btn--active')
-        }
-    })
-  })
-
       //modal
   const modal = document.querySelector('.overlay')
   const modalClose = document.querySelector('.modal__close')

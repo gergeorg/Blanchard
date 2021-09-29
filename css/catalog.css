@@ -232,7 +232,18 @@
   border-top: solid 1px var(--white-color);
 }
 
-.accordion__arrow-btn--active::after {
+.accordion__btn.ui-accordion-header-active {
+
+  border-top: 1px solid var(--hover-color);
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.accordion__btn.ui-accordion-header-active .accordion__arrow-btn {
+  border: 2px solid var(--hover-color);
+  background-color: #D1A9F0;
+}
+
+.accordion__btn.ui-accordion-header-active .accordion__arrow-btn::after {
   top: 15px;
   transform: rotate(-135deg);
 }
